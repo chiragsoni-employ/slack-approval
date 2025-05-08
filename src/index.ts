@@ -170,9 +170,9 @@ async function run(): Promise<void> {
     }
 
     const mainMessage = baseMessageTs
-      ? await web.chat.update({
+      ? await web.chat.postMessage({
           channel: channel_id,
-          ts: baseMessageTs,
+          thread_ts: baseMessageTs,
           ...mainMessagePayload,
         })
       : await web.chat.postMessage({

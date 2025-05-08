@@ -1,6 +1,6 @@
-name: tigerwest/slack-approval
+name: chiragsoni-employ/slack-approval
 description: Custom action to send approval request to Slack from Github, allowing only specified approvers
-author: Beom
+author: Chirag Soni
 runs:
   using: "node20"
   main: "dist/index.js"

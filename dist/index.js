@@ -184,7 +184,7 @@ function run() {
                 return "approved";
             }
             const mainMessage = baseMessageTs
-                ? yield web.chat.update(Object.assign({ channel: channel_id, ts: baseMessageTs }, mainMessagePayload))
+                ? yield web.chat.postMessage(Object.assign({ channel: channel_id, thread_ts: baseMessageTs }, mainMessagePayload))
                 : yield web.chat.postMessage(Object.assign({ channel: channel_id }, mainMessagePayload));
             const replyMessage = yield web.chat.postMessage({
                 channel: channel_id,
